@@ -1,0 +1,27 @@
+# Show status
+defhstatus "<^En-^Et> ^EW [^EM/^Ed (^ED) ^Ec]"
+hardstatus alwayslastline
+
+# Set scrolling lines
+defscrollback 30000
+
+# UTF-8
+defutf8 on
+utf8 on
+
+# Disable startup message
+startup_message off
+
+# Bind keys
+# F11 - Next screen
+bindkey -k F1 next
+# F12 - Focus down in split mode
+bindkey -k F2 focus down
+
+# Create two screen
+screen -fn 0
+screen -fn 1
+
+# Choice first screen
+select 0
+
