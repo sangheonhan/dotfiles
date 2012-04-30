@@ -48,6 +48,8 @@ Bundle 'minibufexpl.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'Solarized'
 filetype plugin indent on
+" Fix 'SSL certificate problem'
+let $GIT_SSL_NO_VERIFY = 'true'
 
 " Win32에서 실행할 경우
 if has("win")
