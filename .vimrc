@@ -22,6 +22,23 @@ set showmatch		" 매치되는 괄호의 반대쪽을 보여줌
 set smartindent		" 역시 자동 들여쓰기
 set title		" 타이틀바에 현재 편집중인 파일을 표시
 
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'The-NERD-tree'
+Bundle 'minibufexpl.vim'
+Bundle 'ZenCoding.vim'
+Bundle 'Solarized'
+filetype plugin indent on
+" Fix 'SSL certificate problem'
+let $GIT_SSL_NO_VERIFY = 'true'
+
+" Set color theme
+colorscheme solarized
+
 " 문법 강조기능 사용
 if has("syntax")
   syntax on
@@ -37,23 +54,6 @@ else
   set background=dark
 endif
 
-" Vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'The-NERD-tree'
-Bundle 'minibufexpl.vim'
-Bundle 'ZenCoding.vim'
-Bundle 'Solarized'
-filetype plugin indent on
-" Fix 'SSL certificate problem'
-let $GIT_SSL_NO_VERIFY = 'true'
-
 " Win32에서 실행할 경우
 if has("win")
 endif
-
-" Set color theme
-colorscheme solarized
