@@ -37,6 +37,7 @@ filetype plugin indent on
 let $GIT_SSL_NO_VERIFY = 'true'
 
 " Set color theme
+let g:solarized_termcolors=16
 colorscheme solarized
 
 " 문법 강조기능 사용
