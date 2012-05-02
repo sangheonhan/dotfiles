@@ -49,11 +49,9 @@ if has("gui_running")
   set visualbell	" 비주얼벨 기능 사용
   set hlsearch		" 찾는 단어를 하이라이팅
   set guifont=DejaVu\ Sans\ Mono\ 12
-  set background=light
-else
-  set background=dark
 endif
 
-" Win32에서 실행할 경우
-if has("win")
+" Win32 GUI에서 실행할 경우
+if has("gui_win32")
+	set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
 endif
