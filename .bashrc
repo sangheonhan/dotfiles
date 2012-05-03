@@ -9,6 +9,11 @@ gnome-*|xterm*|rxvt*)
     ;;
 esac
 
+#Set ls colors for solarized dark
+if [ -f ~/.dircolors.256dark ]; then
+	eval `dircolors ~/.dircolors.256dark`
+fi
+
 # Perlbrew
 if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
 	source ~/perl5/perlbrew/etc/bashrc
