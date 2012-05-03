@@ -10,8 +10,15 @@ gnome-*|xterm*|rxvt*)
 esac
 
 #Set ls colors for solarized dark
-if [ -f ~/.dircolors.256dark ]; then
-	eval `dircolors ~/.dircolors.256dark`
+dircolors --version | perl -e 'while ( <> ) { if ( /(\d+)\.\d+/ && $1 > 5 ) { exit 1; } } exit 0;'
+if [ "$?" -ne "0" ]; then
+    DIRCOLORS_FILE=~/.dircolors.256dark
+else
+    DIRCOLORS_FILE=~/.dircolors.256dark.centos5
+fi
+
+if [ -f $DIRCOLORS_FILE ]; then
+	eval `dircolors $DIRCOLORS_FILE`
 fi
 
 # Perlbrew
