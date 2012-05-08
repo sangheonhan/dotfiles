@@ -10,7 +10,7 @@ gnome-*|xterm*|rxvt*)
 esac
 
 #Set ls colors for solarized dark
-which dircolors
+which dircolors &> /dev/null
 if [ "$?" -eq "0" ]; then
     dircolors --version | perl -e 'while ( <> ) { if ( /(\d+)\.\d+/ && $1 > 5 ) { exit 1; } } exit 0;'
     if [ "$?" -ne "0" ]; then
