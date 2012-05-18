@@ -1,5 +1,12 @@
 # .bashrc
 
+# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.bashrc
+# ~/.extra can be used for settings you don’t want to commit
+for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+    [ -r "$file" ] && source "$file"
+done
+unset file
+
 # Title
 case "$TERM" in
 gnome-*|xterm*|rxvt*)

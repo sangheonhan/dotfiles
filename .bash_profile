@@ -1,11 +1,9 @@
 # .bash_profile
 
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.bashrc
-# ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions,bashrc}; do
-    [ -r "$file" ] && source "$file"
-done
-unset file
+# Load ~/.bashrc
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
