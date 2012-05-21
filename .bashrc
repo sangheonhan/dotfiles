@@ -1,10 +1,5 @@
 # .bashrc
 
-# Load prompt
-if [ -f ~/.bash_prompt ]; then
-    source ~/.bash_prompt
-fi
-
 # Title
 case "$TERM" in
 gnome-*|xterm*|rxvt*)
