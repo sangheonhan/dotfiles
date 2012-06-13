@@ -1,6 +1,7 @@
 # Show status
 defhstatus "<^En-^Et> ^EW [^EM/^Ed (^ED) ^Ec]"
-hardstatus alwayslastline
+termcapinfo gnome-*|xterm*|rxvt*|screen* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+hardstatus off
 
 # Set scrolling lines
 defscrollback 30000
@@ -24,4 +25,3 @@ screen -fn 1
 
 # Choice first screen
 select 0
-
