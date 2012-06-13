@@ -2,15 +2,6 @@
 
 [ -n "$PS1" ] && source ~/.bash_profile
 
-# Title
-case "$TERM" in
-gnome-*|xterm*|rxvt*)
-    PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
-    ;;
-*)
-    ;;
-esac
-
 #Set ls colors for solarized dark
 which dircolors &> /dev/null
 if [ "$?" -eq "0" ]; then
