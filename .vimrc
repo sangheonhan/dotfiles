@@ -21,6 +21,7 @@ set showcmd		" (부분적인) 명령어를 상태라인에 보여줌
 set showmatch		" 매치되는 괄호의 반대쪽을 보여줌
 set smartindent		" 역시 자동 들여쓰기
 set title		" 타이틀바에 현재 편집중인 파일을 표시
+set number		" 행 번호를 표시
 
 " Vundle
 set nocompatible
