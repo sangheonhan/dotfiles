@@ -17,9 +17,8 @@ shopt -s histappend
 shopt -s cdspell
 
 # Prefer Korea Korean and use UTF-8
-export LC_ALL="ko_KR.utf8"
+export LC_ALL="ko_KR.UTF-8"
 export LANG="ko_KR.UTF-8"
-export LANGUAGE="ko_KR.UTF-8"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
