@@ -15,8 +15,3 @@ if [ "$?" -eq "0" ]; then
 	eval `dircolors $DIRCOLORS_FILE`
     fi
 fi
-
-# Perlbrew
-if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
-	source ~/perl5/perlbrew/etc/bashrc
-fi
