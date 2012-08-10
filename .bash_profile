@@ -1,29 +1,54 @@
 # .bash_profile
 
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.bashrc
-# ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+#  ~/.extra, ~/.exports, ~/.aliases, ~/.functions 설정 파일을 순차적으로 읽는다
+# ~/.extra 파일은 커밋하지 않은 설정을 저장하는데 사용한다
+for file in ~/.{extra,exports,aliases,functions}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
 
-# Case-insensitive globbing (used in pathname expansion)
+# 글로빙에 대소문자를 구별하지 않는다
 shopt -s nocaseglob
 
-# Append to the Bash history file, rather than overwriting it
+# 히스토리를 히스토리 파일에 추가하도록 한다
 shopt -s histappend
 
-# Autocorrect typos in path names when using `cd`
+# cd 명령 사용시 오타를 자동 수정하도록 한다
 shopt -s cdspell
 
-# Prefer Korea Korean and use UTF-8
-export LC_ALL="ko_KR.UTF-8"
-export LANG="ko_KR.UTF-8"
+# Perlbrew
+if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
+	source ~/perl5/perlbrew/etc/bashrc
+fi
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+# Git
+if [ -d /usr/local/git ]; then
+    PATH=$PATH:/usr/local/git/bin
+fi
 
-# Set Terminal Title
+# MySQL
+if [ -d /usr/local/mysql ]; then
+    PATH=$PATH:/usr/local/mysql/bin
+fi
+
+# AsciiDoc
+if [ -d /usr/local/ascii ]; then
+    PATH=$PATH:/usr/local/ascii/bin
+fi
+
+export PATH
+
+# 비상호작용 쉘이면 더 이상 진행하지 않는다
+if [ -z "$PS1" ]; then
+    return
+fi
+
+# Bash 프롬프트를 설정한다
+if [ -f ~/.bash_prompt ]; then
+    source ~/.bash_prompt
+fi
+
+# 터미널 타이틀을 설정한다
 case "$TERM" in
 gnome-*|xterm*|rxvt*)
     PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
@@ -32,7 +57,16 @@ gnome-*|xterm*|rxvt*)
     ;;
 esac
 
-# Perlbrew
-if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
-	source ~/perl5/perlbrew/etc/bashrc
+# solarized dark 테마에 맞도록 ls 색상을 설정한다
+which dircolors &> /dev/null
+if [ "$?" -eq "0" ]; then
+    dircolors --version | perl -e 'while ( <> ) { if ( /(\d+)\.\d+/ && $1 > 5 ) { exit 1; } } exit 0;'
+    if [ "$?" -ne "0" ]; then
+	DIRCOLORS_FILE=~/.dircolors.256dark
+    else
+	DIRCOLORS_FILE=~/.dircolors.256dark.centos5
+    fi
+    if [ -f $DIRCOLORS_FILE ]; then
+	eval `dircolors $DIRCOLORS_FILE`
+    fi
 fi
