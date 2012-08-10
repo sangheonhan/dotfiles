@@ -36,6 +36,14 @@ if [ -d /usr/local/ascii ]; then
     PATH=$PATH:/usr/local/ascii/bin
 fi
 
+# MacPorts
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    if [ -d /opt/local/bin ]; then
+	export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+    fi
+fi
+
+# Export $PATH
 export PATH
 
 # 비상호작용 쉘이면 더 이상 진행하지 않는다
