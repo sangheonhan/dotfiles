@@ -7,7 +7,7 @@ set background=dark	" 백그라우드 색상
 set backspace=2		" 삽입 모드에서 백스페이스를 계속 허용
 set cindent		" C 언어 자동 들여쓰기
 set encoding=utf-8	" 에디터 인코딩을 UTF-8로 설정
-set fileencodings=utf-8	" 파일인코딩을 UTF-8로 설정
+set fileencodings=utf-8,euc-kr	" 파일인코딩을 UTF-8로 설정
 set foldmethod=marker	" 폴딩 방식
 set ignorecase		" 찾기에서 대/소문자를 구별하지 않음
 set incsearch		" 점진적으로 찾기
