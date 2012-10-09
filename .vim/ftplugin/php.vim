@@ -1,6 +1,16 @@
-au BufRead,BufNewFile *.php set ai ci si ts=4 sw=4 et fdm=marker
-set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
-set keywordprg=pman
+setlocal tabstop=4
+setlocal softtabstop=4
+setlocal shiftwidth=4
+setlocal smarttab
+setlocal expandtab
+setlocal autoindent
+setlocal copyindent
+setlocal smartindent
+setlocal formatoptions=croql
+setlocal foldmethod=marker
+setlocal tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
+setlocal keywordprg=pman
+
 map <F5> :!make %:p<CR>
 map <F6> :!php -l %:p<CR>
 map <F7> :!phpunit %:p<CR>
