@@ -11,5 +11,5 @@ setlocal foldmethod=marker
 setlocal tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 setlocal keywordprg=pman
 
-map <F5> :!make %:p<CR>
+map <F5> :!make<CR>
 map <F8> :!%:p<CR>
