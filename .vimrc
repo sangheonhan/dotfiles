@@ -22,6 +22,7 @@ set showmatch		" 매치되는 괄호의 반대쪽을 보여줌
 set smartindent		" 역시 자동 들여쓰기
 set title		" 타이틀바에 현재 편집중인 파일을 표시
 set number		" 행 번호를 표시
+set hlsearch		" 찾는 단어를 하이라이팅
 
 " Vundle
 set nocompatible
@@ -49,7 +50,6 @@ endif
 " GUI 모드로 실행할 경우
 if has("gui_running")
   set visualbell	" 비주얼벨 기능 사용
-  set hlsearch		" 찾는 단어를 하이라이팅
   set guifont=DejaVu\ Sans\ Mono\ 12
 endif
 
