@@ -9,7 +9,7 @@ setlocal smartindent
 setlocal formatoptions=croql
 setlocal foldmethod=marker
 setlocal tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
-setlocal keywordprg=pman
+setlocal keywordprg=man
 
 map <F5> :!make<CR>
 map <F8> :!%:p<CR>
