@@ -30,10 +30,19 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'The-NERD-tree'
-Bundle 'minibufexpl.vim'
-Bundle 'ZenCoding.vim'
+Bundle 'SQLComplete.vim'
 Bundle 'Solarized'
+Bundle 'The-NERD-tree'
+Bundle 'ZenCoding.vim'
+Bundle 'checksyntax'
+Bundle 'matchit.zip'
+Bundle 'minibufexpl.vim'
+Bundle 'php.vim'
+Bundle 'phpfolding.vim'
+Bundle 'snippetsEmu'
+Bundle 'surround.vim'
+Bundle 'taglist.vim'
+Bundle 'vcscommand.vim'
 filetype plugin indent on
 " Fix 'SSL certificate problem'
 let $GIT_SSL_NO_VERIFY = 'true'
