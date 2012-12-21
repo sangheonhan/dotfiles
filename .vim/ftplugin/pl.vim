@@ -9,10 +9,10 @@ setlocal smartindent
 setlocal formatoptions=croql
 setlocal foldmethod=marker
 setlocal tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
-setlocal keywordprg=man
+setlocal keywordprg=perldoc
 
-map <F5> :!make<CR>
-map <F8> :!%:p<CR>
+map <F5> :!make %:p<CR>
+map <F8> :!perl %:p<CR>
 
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2

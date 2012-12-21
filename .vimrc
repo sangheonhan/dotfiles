@@ -29,20 +29,22 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Bundle 'Indent-Guides'
 Bundle 'SQLComplete.vim'
 Bundle 'Solarized'
 Bundle 'The-NERD-tree'
 Bundle 'ZenCoding.vim'
 Bundle 'checksyntax'
+Bundle 'gmarik/vundle'
 Bundle 'matchit.zip'
 Bundle 'minibufexpl.vim'
 Bundle 'php.vim'
 Bundle 'phpfolding.vim'
-Bundle 'snippetsEmu'
+Bundle 'snipMate'
 Bundle 'surround.vim'
 Bundle 'taglist.vim'
 Bundle 'vcscommand.vim'
+Bundle 'dbext.vim'
 filetype plugin indent on
 " Fix 'SSL certificate problem'
 let $GIT_SSL_NO_VERIFY = 'true'
@@ -53,16 +55,16 @@ colorscheme solarized
 
 " 문법 강조기능 사용
 if has("syntax")
-  syntax on
+    syntax on
 endif
 
 " GUI 모드로 실행할 경우
 if has("gui_running")
-  set visualbell	" 비주얼벨 기능 사용
-  set guifont=DejaVu\ Sans\ Mono\ 12
+    set visualbell	" 비주얼벨 기능 사용
+    set guifont=DejaVu\ Sans\ Mono\ 12
 endif
 
 " Win32 GUI에서 실행할 경우
 if has("gui_win32")
-	set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
+    set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
 endif
