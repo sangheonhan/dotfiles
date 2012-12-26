@@ -11,11 +11,9 @@ setlocal foldmethod=marker
 setlocal tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 setlocal keywordprg=perldoc
 
-map <F5> :!make %:p<CR>
-map <F8> :!perl %:p<CR>
+map <Leader>m :!make %:p<CR>
+map <Leader>r :!perl %:p<CR>
 
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 IndentGuidesEnable
-
-let g:sql_type_default = 'mysql'

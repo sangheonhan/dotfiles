@@ -29,22 +29,23 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'gmarik/vundle'
 Bundle 'Indent-Guides'
-Bundle 'SQLComplete.vim'
 Bundle 'Solarized'
 Bundle 'The-NERD-tree'
-Bundle 'ZenCoding.vim'
-Bundle 'checksyntax'
-Bundle 'gmarik/vundle'
-Bundle 'matchit.zip'
 Bundle 'minibufexpl.vim'
-Bundle 'php.vim'
-Bundle 'phpfolding.vim'
 Bundle 'snipMate'
-Bundle 'surround.vim'
 Bundle 'taglist.vim'
-Bundle 'vcscommand.vim'
-Bundle 'dbext.vim'
+"Bundle 'ZenCoding.vim'
+"Bundle 'checksyntax'
+"Bundle 'matchit.zip'
+"Bundle 'php.vim'
+"Bundle 'phpfolding.vim'
+"Bundle 'surround.vim'
+"Bundle 'SQLComplete.vim'
+"Bundle 'vcscommand.vim'
+"Bundle 'dbext.vim'
+"Bundle 'netrw.vim'
 filetype plugin indent on
 " Fix 'SSL certificate problem'
 let $GIT_SSL_NO_VERIFY = 'true'
@@ -68,3 +69,10 @@ endif
 if has("gui_win32")
     set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
 endif
+
+" Map
+map <Leader>n :NERDTreeToggle<CR>
+map <Leader>t :TlistToggle<CR>
+
+" TagList
+let Tlist_Use_Right_Window = 1
