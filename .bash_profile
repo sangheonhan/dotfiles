@@ -2,7 +2,7 @@
 
 #  ~/.extra, ~/.exports, ~/.aliases, ~/.functions 설정 파일을 순차적으로 읽는다
 # ~/.extra 파일은 커밋하지 않은 설정을 저장하는데 사용한다
-for file in ~/.{extra,exports,aliases,functions}; do
+for file in ~/.{extra,exports,aliases,functions,paths}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
@@ -20,31 +20,6 @@ shopt -s cdspell
 if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
 	source ~/perl5/perlbrew/etc/bashrc
 fi
-
-# Git
-if [ -d /usr/local/git ]; then
-    PATH=$PATH:/usr/local/git/bin
-fi
-
-# MySQL
-if [ -d /usr/local/mysql ]; then
-    PATH=$PATH:/usr/local/mysql/bin
-fi
-
-# AsciiDoc
-if [ -d /usr/local/ascii ]; then
-    PATH=$PATH:/usr/local/ascii/bin
-fi
-
-# MacPorts
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-    if [ -d /opt/local/bin ]; then
-	export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-    fi
-fi
-
-# Export $PATH
-export PATH
 
 # 비상호작용 쉘이면 더 이상 진행하지 않는다
 if [ -z "$PS1" ]; then

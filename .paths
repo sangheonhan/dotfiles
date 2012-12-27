@@ -1,0 +1,29 @@
+# .paths
+
+# Homebrew
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+fi
+
+# Git
+if [ -d /usr/local/git ]; then
+    PATH=$PATH:/usr/local/git/bin
+fi
+
+# MySQL
+if [ -d /usr/local/mysql ]; then
+    PATH=$PATH:/usr/local/mysql/bin
+fi
+
+# PHP
+if [ -d /usr/local/php ]; then
+    PATH=$PATH:/usr/local/php/bin
+fi
+
+# AsciiDoc
+if [ -d /usr/local/ascii ]; then
+    PATH=$PATH:/usr/local/ascii/bin
+fi
+
+# Export $PATH
+export PATH
