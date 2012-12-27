@@ -5,6 +5,11 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 fi
 
+# Vim
+if [ -d /usr/local/vim ]; then
+    PATH=$PATH:/usr/local/vim/bin
+fi
+
 # Git
 if [ -d /usr/local/git ]; then
     PATH=$PATH:/usr/local/git/bin
