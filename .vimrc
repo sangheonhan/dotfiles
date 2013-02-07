@@ -36,6 +36,7 @@ Bundle 'The-NERD-tree'
 Bundle 'minibufexpl.vim'
 Bundle 'snipMate'
 Bundle 'taglist.vim'
+Bundle 'joonty/vdebug.git'
 "Bundle 'ZenCoding.vim'
 "Bundle 'checksyntax'
 "Bundle 'matchit.zip'
@@ -69,6 +70,9 @@ endif
 if has("gui_win32")
     set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
 endif
+
+" 마우스
+set mouse=n
 
 " Map
 map <Leader>n :NERDTreeToggle<CR>
