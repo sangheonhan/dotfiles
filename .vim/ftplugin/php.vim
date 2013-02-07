@@ -10,8 +10,10 @@ setlocal formatoptions=croql
 setlocal foldmethod=marker
 setlocal tags=tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 setlocal keywordprg=pman
+setlocal makeprg=php\ -l\ %
+setlocal errorformat=%m\ in\ %f\ on\ line\ %l
 
-map <Leader>m :!make<CR>
+map <Leader>m :make<CR>
 map <Leader>l :!php -l %:p<CR>
 map <Leader>u :!phpunit %:p<CR>
 map <Leader>r :!php %:p<CR>
