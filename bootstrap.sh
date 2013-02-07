@@ -4,6 +4,10 @@ git pull
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
 }
+if [ ! -d ~/.vim/bundle/vundle ]; then
+	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+fi
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
@@ -15,3 +19,4 @@ else
 fi
 unset doIt
 source ~/.bash_profile
+vim +BundleInstall +qall
