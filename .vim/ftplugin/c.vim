@@ -17,3 +17,6 @@ map <Leader>r :!%:p<CR>
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 IndentGuidesEnable
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/

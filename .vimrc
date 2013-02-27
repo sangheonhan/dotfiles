@@ -72,7 +72,7 @@ if has("gui_win32")
 endif
 
 " 마우스
-set mouse=n
+"set mouse=n
 
 " Map
 map <Leader>n :NERDTreeToggle<CR>
