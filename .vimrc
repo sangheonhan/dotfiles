@@ -36,7 +36,9 @@ Bundle 'The-NERD-tree'
 Bundle 'minibufexpl.vim'
 Bundle 'snipMate'
 Bundle 'taglist.vim'
-Bundle 'joonty/vdebug.git'
+if version >= 703
+    Bundle 'joonty/vdebug.git'
+endif
 "Bundle 'ZenCoding.vim'
 "Bundle 'checksyntax'
 "Bundle 'matchit.zip'
