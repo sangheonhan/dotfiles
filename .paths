@@ -7,27 +7,27 @@ fi
 
 # Vim
 if [ -d /usr/local/vim ]; then
-    PATH=$PATH:/usr/local/vim/bin
+    PATH=/usr/local/vim/bin:$PATH
 fi
 
 # Git
 if [ -d /usr/local/git ]; then
-    PATH=$PATH:/usr/local/git/bin
+    PATH=/usr/local/git/bin:$PATH
 fi
 
 # MySQL
 if [ -d /usr/local/mysql ]; then
-    PATH=$PATH:/usr/local/mysql/bin
+    PATH=/usr/local/mysql/bin:$PATH
 fi
 
 # PHP
 if [ -d /usr/local/php ]; then
-    PATH=$PATH:/usr/local/php/bin
+    PATH=/usr/local/php/bin:$PATH
 fi
 
 # AsciiDoc
 if [ -d /usr/local/ascii ]; then
-    PATH=$PATH:/usr/local/ascii/bin
+    PATH=/usr/local/ascii/bin:$PATH
 fi
 
 # Export $PATH
