@@ -62,7 +62,7 @@ endif
 " GUI 모드로 실행할 경우
 if has("gui_running")
     set visualbell	" 비주얼벨 기능 사용
-    set guifont=DejaVu\ Sans\ Mono\ 12
+    set guifont=Bitstream\ Vera\ Sans\ Mono:h12
 endif
 
 " Win32 GUI에서 실행할 경우
