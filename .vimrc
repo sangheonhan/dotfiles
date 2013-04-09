@@ -62,12 +62,13 @@ endif
 " GUI 모드로 실행할 경우
 if has("gui_running")
     set visualbell	" 비주얼벨 기능 사용
-    set guifont=Bitstream\ Vera\ Sans\ Mono:h12
-endif
-
-" Win32 GUI에서 실행할 경우
-if has("gui_win32")
-    set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
+    if has("gui_macvim")
+	set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+    elseif has("gui_win32")
+	set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
+    else
+	set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+    endif
 endif
 
 " 마우스
