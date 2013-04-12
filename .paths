@@ -3,6 +3,11 @@
 # Homebrew
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+    # PHP
+    if [ -d "$(brew --prefix josegonzalez/php/php54)/bin" ]; then
+	PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+    fi
 fi
 
 # Vim
@@ -28,11 +33,6 @@ fi
 # AsciiDoc
 if [ -d /usr/local/ascii ]; then
     PATH=/usr/local/ascii/bin:$PATH
-fi
-
-# Homebrew PHP
-if [ -d "$(brew --prefix josegonzalez/php/php54)/bin" ]; then
-    PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 fi
 
 # Export $PATH
