@@ -17,3 +17,15 @@ function nginx-restart() {
     sudo launchctl unload -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
     sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
 }
+
+function mkrandfile() {
+    dd if=/dev/urandom of=$1 bs=1048576 count=$2
+}
+
+function randkey() {
+    php -r '$seed = array_merge(range("1", "9"), range("a", "z"), range("A", "Z")); shuffle($seed); $length = (isset($argv[1])) ? intval($argv[1]) : 32; $seed_size = count($seed); $randkey = ""; for ($i = 0; $i < $length; $i++) { $randkey .= $seed[rand(0, $seed_size - 1)]; }; echo "$randkey\n";' $@
+}
+
+function unixtime() {
+    date --date="@$1"
+}
