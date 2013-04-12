@@ -21,6 +21,11 @@ if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
 	source ~/perl5/perlbrew/etc/bashrc
 fi
 
+# PHPBrew
+if [ -f ~/.phpbrew/bashrc ]; then
+	source ~/.phpbrew/bashrc
+fi
+
 # 비상호작용 쉘이면 더 이상 진행하지 않는다
 if [ -z "$PS1" ]; then
     return
