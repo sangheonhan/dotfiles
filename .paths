@@ -6,7 +6,7 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
 
     # PHP
     if [ -d "$(brew --prefix josegonzalez/php/php54)/bin" ]; then
-	PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+	PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
     fi
 fi
 
