@@ -83,3 +83,6 @@ map <Leader>t :TlistToggle<CR>
 
 " TagList
 let Tlist_Use_Right_Window = 1
+
+" neocomplcache 
+let g:neocomplcache_enable_at_startup = 1
