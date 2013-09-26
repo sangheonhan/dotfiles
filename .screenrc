@@ -3,7 +3,7 @@ defhstatus "<^En-^Et> ^EW [^EM/^Ed (^ED) ^Ec]"
 termcapinfo gnome-*|xterm*|rxvt*|screen* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 shelltitle "$ |bash"
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m/%d %{W}%c %{g}]'
 
 # Set scrolling lines
 defscrollback 30000
