@@ -45,6 +45,7 @@ Bundle 'vcscommand.vim'
 Bundle 'dbext.vim'
 Bundle 'netrw.vim'
 Bundle 'neocomplcache'
+Bundle 'vim-json-bundle'
 " Plugins for PHP
 Bundle 'php.vim'
 Bundle 'checksyntax'
