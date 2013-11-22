@@ -81,6 +81,7 @@ endif
 " Map
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>t :TlistToggle<CR>
+nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
 
 " TagList
 let Tlist_Use_Right_Window = 1

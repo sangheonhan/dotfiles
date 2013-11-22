@@ -14,11 +14,5 @@ setlocal keywordprg=perldoc
 map <Leader>m :!make %:p<CR>
 map <Leader>r :!perl %:p<CR>
 
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-if exists("*IndentGuidesEnable")
-    IndentGuidesEnable
-endif
-
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
