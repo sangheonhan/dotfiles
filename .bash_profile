@@ -55,6 +55,6 @@ if [ "$?" -eq "0" ]; then
 	DIRCOLORS_FILE=~/.dircolors.256dark.centos5
     fi
     if [ -f $DIRCOLORS_FILE ]; then
-	eval `dircolors $DIRCOLORS_FILE`
+	eval `dircolors -b $DIRCOLORS_FILE`
     fi
 fi
