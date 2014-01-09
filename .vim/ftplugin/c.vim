@@ -14,5 +14,7 @@ setlocal keywordprg=man
 map <Leader>m :!make<CR>
 map <Leader>r :!%:p<CR>
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+if !exists ("g:ignore_overlength") || g:ignore_overlength == 0
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
+endif

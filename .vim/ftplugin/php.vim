@@ -18,5 +18,7 @@ map <Leader>l :!php -l %:p<CR>
 map <Leader>u :!phpunit %:p<CR>
 map <Leader>r :!php %:p<CR>
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+if !exists ("g:ignore_overlength") || g:ignore_overlength == 0
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
+endif
