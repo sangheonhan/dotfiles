@@ -46,6 +46,8 @@ Bundle 'dbext.vim'
 Bundle 'netrw.vim'
 Bundle 'neocomplcache'
 Bundle 'vim-json-bundle'
+Bundle 'Syntastic'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugins for PHP
 Bundle 'php.vim'
 Bundle 'checksyntax'
@@ -67,11 +69,11 @@ endif
 if has("gui_running")
     set visualbell	" 비주얼벨 기능 사용
     if has("gui_macvim")
-	set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+	set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14
     elseif has("gui_win32")
-	set guifont=Bitstream_Vera_Sans_Mono:h12:cHANGEUL
+	set guifont=Bitstream_Vera_Sans_Mono\ for\ Powerline:h12:cHANGEUL
     else
-	set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
+	set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12
     endif
 endif
 
@@ -82,6 +84,10 @@ endif
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>t :TlistToggle<CR>
 nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
 
 " TagList
 let Tlist_Use_Right_Window = 1
