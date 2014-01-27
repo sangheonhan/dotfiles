@@ -47,6 +47,7 @@ Bundle 'netrw.vim'
 Bundle 'neocomplcache'
 Bundle 'vim-json-bundle'
 Bundle 'Syntastic'
+Bundle 'ctrlp.vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugins for PHP
 Bundle 'php.vim'
@@ -88,6 +89,11 @@ nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
 " Powerline
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+
+" Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 " TagList
 let Tlist_Use_Right_Window = 1
