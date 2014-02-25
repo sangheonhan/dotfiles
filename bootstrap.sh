@@ -22,11 +22,3 @@ source ~/.bash_profile
 
 # Install Vundle
 vim +BundleInstall +qall
-
-# Install Directory Jump
-if [ ! -d ./dj ]; then
-    git clone https://github.com/ygpark/dj
-fi
-cd dj
-git pull
-./bootstrap.sh
