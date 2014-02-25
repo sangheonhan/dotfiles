@@ -23,7 +23,7 @@ else
 fi
 
 # IP addresses
-alias ipconfig="/sbin/ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias ipconfig="/sbin/ifconfig -a | perl -nle 'chomp(\$1), print \$1 if /(\d+\.\d+\.\d+\.\d+)/;'"
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
