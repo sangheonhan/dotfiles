@@ -46,15 +46,13 @@ gnome-*|xterm*|rxvt*)
 esac
 
 # solarized dark 테마에 맞도록 ls 색상을 설정한다
-which dircolors &> /dev/null
-if [ "$?" -eq "0" ]; then
-    dircolors --version | perl -e 'while ( <> ) { if ( /(\d+)\.\d+/ && $1 > 5 ) { exit 1; } } exit 0;'
-    if [ "$?" -ne "0" ]; then
-	DIRCOLORS_FILE=~/.dircolors.256dark
-    else
-	DIRCOLORS_FILE=~/.dircolors.256dark.centos5
-    fi
-    if [ -f $DIRCOLORS_FILE ]; then
-	eval `dircolors -b $DIRCOLORS_FILE`
-    fi
+DIRCOLOR_VERSION=`dircolors --version`
+echo $DIRCOLOR_VERSION | perl -e 'while ( <> ) { if ( /(\d+)\.\d+/ && $1 > 5 ) { exit 1; } } exit 0;'
+if [ "$?" -ne "0" ]; then
+    DIRCOLORS_FILE=~/.dircolors.256dark
+else
+    DIRCOLORS_FILE=~/.dircolors.256dark.centos5
+fi
+if [ -f $DIRCOLORS_FILE ]; then
+    eval `dircolors -b $DIRCOLORS_FILE`
 fi
