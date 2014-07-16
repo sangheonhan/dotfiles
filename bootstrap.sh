@@ -22,3 +22,6 @@ source ~/.bash_profile
 
 # Install Vundle
 vim +BundleInstall +qall
+
+# Reload tmux configration
+tmux source-file ~/.tmux.conf
