@@ -17,8 +17,8 @@ shopt -s histappend
 shopt -s cdspell
 
 # Perlbrew
-if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
-	source ~/perl5/perlbrew/etc/bashrc
+if [ -f ~/.perl5/etc/bashrc ]; then
+	source ~/.perl5/etc/bashrc
 fi
 
 # PHPBrew
