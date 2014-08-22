@@ -30,5 +30,10 @@ if [ -d /usr/local/ascii ]; then
     PATH=/usr/local/ascii/bin:$PATH
 fi
 
+# Composer Global
+if [ -d $HOME/.composer/vendor/bin ]; then
+    PATH=$HOME/.composer/vendor/bin:$PATH
+fi
+
 # Export $PATH
 export PATH

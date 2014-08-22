@@ -53,6 +53,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'php.vim'
 Bundle 'checksyntax'
 Bundle 'shawncplus/phpcomplete.vim'
+Bundle 'stephpy/vim-php-cs-fixer'
 filetype plugin indent on
 " Fix 'SSL certificate problem'
 let $GIT_SSL_NO_VERIFY = 'true'
