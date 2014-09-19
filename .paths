@@ -37,12 +37,12 @@ fi
 
 # GNU coreutils
 if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
-    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
 fi
 
 # GNU coreutils Manpage
 if [ -d /usr/local/opt/coreutils/libexec/gnuman ]; then
-    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    MANPATH="$MANPATH:/usr/local/opt/coreutils/libexec/gnuman"
 fi
 
 # Export
