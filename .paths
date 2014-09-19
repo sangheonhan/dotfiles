@@ -35,5 +35,16 @@ if [ -d $HOME/.composer/vendor/bin ]; then
     PATH=$HOME/.composer/vendor/bin:$PATH
 fi
 
-# Export $PATH
+# GNU coreutils
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
+    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+fi
+
+# GNU coreutils Manpage
+if [ -d /usr/local/opt/coreutils/libexec/gnuman ]; then
+    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
+
+# Export
 export PATH
+export MANPATH
