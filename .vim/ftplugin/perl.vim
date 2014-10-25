@@ -13,8 +13,3 @@ setlocal keywordprg=perldoc
 
 map <Leader>m :!make %:p<CR>
 map <Leader>r :!perl %:p<CR>
-
-if !exists ("g:ignore_overlength") || g:ignore_overlength == 0
-    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    match OverLength /\%81v.\+/
-endif
