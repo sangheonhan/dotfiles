@@ -71,7 +71,7 @@ endif
 if has("gui_running")
     set visualbell	" 비주얼벨 기능 사용
     if has("gui_macvim")
-	set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14
+	set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h18
     elseif has("gui_win32")
 	set guifont=Bitstream_Vera_Sans_Mono\ for\ Powerline:h12:cHANGEUL
     else
@@ -101,3 +101,6 @@ let Tlist_Use_Right_Window = 1
 
 " neocomplcache 
 let g:neocomplcache_enable_at_startup = 1
+
+" Markdown
+au BufRead,BufNewFile *.md set filetype=markdown
