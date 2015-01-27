@@ -30,3 +30,6 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 
 # Use vim instead of vi
 alias vi=vim
+
+# vim viewer
+alias v=view
