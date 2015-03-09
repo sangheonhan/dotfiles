@@ -48,12 +48,14 @@ Bundle 'neocomplcache'
 Bundle 'vim-json-bundle'
 Bundle 'Syntastic'
 Bundle 'ctrlp.vim'
+Bundle 'AutoTag'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugins for PHP
 Bundle 'php.vim'
 Bundle 'checksyntax'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'stephpy/vim-php-cs-fixer'
+Bundle 'arnaud-lb/vim-php-namespace'
 filetype plugin indent on
 " Fix 'SSL certificate problem'
 let $GIT_SSL_NO_VERIFY = 'true'
