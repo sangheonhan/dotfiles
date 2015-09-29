@@ -23,6 +23,8 @@ set smartindent		" 역시 자동 들여쓰기
 set title		" 타이틀바에 현재 편집중인 파일을 표시
 set number		" 행 번호를 표시
 set hlsearch		" 찾는 단어를 하이라이팅
+set langmenu=none	" 영문 메뉴
+language messages ko_KR.utf-8	" 한국어 vim 메시지
 
 " Vundle
 set nocompatible
@@ -76,14 +78,16 @@ if has("gui_running")
     if has("gui_macvim")
 	set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h18
     elseif has("gui_win32")
-	set guifont=Bitstream_Vera_Sans_Mono\ for\ Powerline:h12:cHANGEUL
+	set guifont=Bitstream_Vera_Sans_Mono_for_Po:h12:cHANGEUL
     else
 	set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12
     endif
 endif
 
 " 마우스
-"set mouse=n
+if has('win32')
+    set mouse=n
+endif
 
 " Map
 map <Leader>n :NERDTreeToggle<CR>
