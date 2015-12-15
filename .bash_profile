@@ -45,6 +45,9 @@ gnome-*|xterm*|rxvt*)
     ;;
 esac
 
+# 명령 실행시마다 히스토리를 다시 읽도록 한다
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # solarized dark 테마에 맞도록 ls 색상을 설정한다
 dircolors 2>/dev/null 1>&2
 if [ "$?" -eq "0" ]; then
