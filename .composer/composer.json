@@ -1,0 +1,17 @@
+{
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:bookwormkr/pman-php-manual.git"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "@stable",
+        "phpdocumentor/phpdocumentor": "@stable",
+        "squizlabs/php_codesniffer": "^2.3",
+        "fabpot/php-cs-fixer": "@stable",
+        "phpmd/phpmd": "@stable",
+        "phploc/phploc": "@stable",
+        "gonzaloserrano/pman-php-manual": "dev-master"
+    }
+}
