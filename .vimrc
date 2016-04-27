@@ -54,6 +54,7 @@ Bundle 'ctrlp.vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Plugins for PHP
+Bundle 'StanAngeloff/php.vim'
 "Bundle 'php.vim'
 "Bundle 'checksyntax'
 "Bundle 'shawncplus/phpcomplete.vim'

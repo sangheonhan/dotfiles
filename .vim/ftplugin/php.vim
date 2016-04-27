@@ -17,3 +17,13 @@ map <Leader>m :make<CR>
 map <Leader>l :!php -l %:p<CR>
 map <Leader>u :!phpunit %:p<CR>
 map <Leader>r :!php %:p<CR>
+
+function! PhpSyntaxOverride()
+    hi! def link phpDocTags  phpDefine
+    hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+    autocmd!
+    autocmd FileType php call PhpSyntaxOverride()
+augroup END
