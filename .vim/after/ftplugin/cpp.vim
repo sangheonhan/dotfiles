@@ -12,7 +12,7 @@ setlocal tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../
 setlocal keywordprg=man
 
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 map <Leader>m :!make<CR>
-map <Leader>r :!g++ -Wall -std=c++11 -o %:r % && ./%:r<CR>
+map <Leader>r :!clang++ -Wall -std=c++11 -o %:r % && ./%:r<CR>
