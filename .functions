@@ -9,3 +9,7 @@ function randkey() {
 function unixtime() {
     date --date="@$1"
 }
+
+function composer() {
+    COMPOSER="$(which composer)" || { echo "Could not find composer in path" >&2 ; return 1 ; } && sudo phpdismod -s cli xdebug ; $COMPOSER "$@" ; STATUS=$? ; sudo phpenmod -s cli xdebug ; return $STATUS ;
+}
