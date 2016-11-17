@@ -2,7 +2,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:bookwormkr/pman-php-manual.git"
+            "url": "git@github.com:sangheonhan/pman-php-manual.git"
         }
     ],
     "require": {
