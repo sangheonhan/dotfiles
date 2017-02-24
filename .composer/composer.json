@@ -8,10 +8,11 @@
     "require": {
         "phpunit/phpunit": "@stable",
         "phpdocumentor/phpdocumentor": "@stable",
-        "squizlabs/php_codesniffer": "^2.3",
+        "squizlabs/php_codesniffer": "@stable",
         "friendsofphp/php-cs-fixer": "@stable",
         "phpmd/phpmd": "@stable",
         "phploc/phploc": "@stable",
-        "gonzaloserrano/pman-php-manual": "dev-master"
+        "gonzaloserrano/pman-php-manual": "dev-master",
+        "hirak/prestissimo": "@stable"
     }
 }
