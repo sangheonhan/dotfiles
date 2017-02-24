@@ -31,27 +31,27 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'Indent-Guides'
-Bundle 'Solarized'
-Bundle 'The-NERD-tree'
-Bundle 'minibufexpl.vim'
-Bundle 'snipMate'
-Bundle 'taglist.vim'
-Bundle 'joonty/vdebug.git'
-"Bundle 'ZenCoding.vim'
-"Bundle 'matchit.zip'
-"Bundle 'surround.vim'
-"Bundle 'SQLComplete.vim'
-"Bundle 'vcscommand.vim'
-"Bundle 'dbext.vim'
-"Bundle 'netrw.vim'
-Bundle 'neocomplcache'
-"Bundle 'vim-json-bundle'
-Bundle 'Syntastic'
-Bundle 'ctrlp.vim'
-"Bundle 'AutoTag'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'gmarik/vundle'
+Plugin 'Indent-Guides'
+Plugin 'Solarized'
+Plugin 'The-NERD-tree'
+Plugin 'minibufexpl.vim'
+Plugin 'snipMate'
+Plugin 'taglist.vim'
+Plugin 'joonty/vdebug.git'
+Plugin 'Shougo/neocomplete'
+"Plugin 'ZenCoding.vim'
+"Plugin 'matchit.zip'
+"Plugin 'surround.vim'
+"Plugin 'SQLComplete.vim'
+"Plugin 'vcscommand.vim'
+"Plugin 'dbext.vim'
+"Plugin 'netrw.vim'
+"Plugin 'vim-json-bundle'
+Plugin 'Syntastic'
+Plugin 'ctrlp.vim'
+"Plugin 'AutoTag'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Plugins for PHP
 Bundle 'StanAngeloff/php.vim'
@@ -107,8 +107,9 @@ let g:ctrlp_working_path_mode = 'ra'
 " TagList
 let Tlist_Use_Right_Window = 1
 
-" neocomplcache 
-let g:neocomplcache_enable_at_startup = 1
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+set completeopt-=preview
 
 " Markdown
 au BufRead,BufNewFile *.md set filetype=markdown
