@@ -109,7 +109,7 @@ let Tlist_Use_Right_Window = 1
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
-set completeopt-=preview
+let g:neocomplete#enable_smart_case = 1
 
 " Markdown
 au BufRead,BufNewFile *.md set filetype=markdown
