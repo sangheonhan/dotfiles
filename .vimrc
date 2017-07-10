@@ -39,7 +39,8 @@ Plugin 'minibufexpl.vim'
 Plugin 'snipMate'
 Plugin 'taglist.vim'
 Plugin 'joonty/vdebug.git'
-Plugin 'Shougo/neocomplete'
+"Plugin 'Shougo/neocomplete'
+Plugin 'neocomplcache'
 "Plugin 'ZenCoding.vim'
 "Plugin 'matchit.zip'
 "Plugin 'surround.vim'
@@ -111,6 +112,10 @@ let Tlist_Use_Right_Window = 1
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_auto_close_preview = 1
+
+" netcomplecache
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
 
 " Markdown
 au BufRead,BufNewFile *.md set filetype=markdown
