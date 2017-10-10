@@ -14,5 +14,15 @@
         "phploc/phploc": "@stable",
         "gonzaloserrano/pman-php-manual": "dev-master",
         "hirak/prestissimo": "@stable"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "phpcs --config-set default_standard PSR2",
+            "phpcs --config-set colors 1"
+        ],
+        "post-install-cmd": [
+            "phpcs --config-set default_standard PSR2",
+            "phpcs --config-set colors 1"
+        ]
     }
 }
