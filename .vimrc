@@ -32,41 +32,41 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Plugin 'gmarik/vundle'
-Plugin 'Indent-Guides'
-Plugin 'Solarized'
-Plugin 'The-NERD-tree'
-Plugin 'minibufexpl.vim'
-Plugin 'snipMate'
-Plugin 'taglist.vim'
-Plugin 'joonty/vdebug.git'
-"Plugin 'Shougo/neocomplete'
-Plugin 'neocomplcache'
-"Plugin 'ZenCoding.vim'
-"Plugin 'matchit.zip'
-"Plugin 'surround.vim'
-"Plugin 'SQLComplete.vim'
-"Plugin 'vcscommand.vim'
-"Plugin 'dbext.vim'
-"Plugin 'netrw.vim'
-"Plugin 'vim-json-bundle'
 Plugin 'Syntastic'
-Plugin 'ctrlp.vim'
-"Plugin 'AutoTag'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'AutoTag'
+"Plugin 'Indent-Guides'
+"Plugin 'SQLComplete.vim'
+"Plugin 'Shougo/neocomplete'
+"Plugin 'Solarized'
+"Plugin 'The-NERD-tree'
+"Plugin 'ZenCoding.vim'
+"Plugin 'ctrlp.vim'
+"Plugin 'dbext.vim'
+"Plugin 'joonty/vdebug.git'
+"Plugin 'matchit.zip'
+"Plugin 'minibufexpl.vim'
+"Plugin 'neocomplcache'
+"Plugin 'netrw.vim'
+"Plugin 'snipMate'
+"Plugin 'surround.vim'
+"Plugin 'taglist.vim'
+"Plugin 'vcscommand.vim'
+"Plugin 'vim-json-bundle'
 
 " Plugins for PHP
-Bundle 'StanAngeloff/php.vim'
-"Bundle 'php.vim'
+"Bundle 'StanAngeloff/php.vim'
+"Bundle 'arnaud-lb/vim-php-namespace'
 "Bundle 'checksyntax'
+"Bundle 'php.vim'
 "Bundle 'shawncplus/phpcomplete.vim'
 "Bundle 'stephpy/vim-php-cs-fixer'
-"Bundle 'arnaud-lb/vim-php-namespace'
 filetype plugin indent on
 " Fix 'SSL certificate problem'
 let $GIT_SSL_NO_VERIFY = 'true'
 
 " Set color theme
-let g:solarized_termcolors=16
+"let g:solarized_termcolors=16
 colorscheme solarized
 
 " 문법 강조기능 사용
@@ -128,3 +128,6 @@ let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Search in all subdirectories.
+set path+=**
