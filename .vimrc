@@ -32,13 +32,13 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Plugin 'gmarik/vundle'
-Plugin 'Syntastic'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Solarized'
+Plugin 'Syntastic'
 "Plugin 'AutoTag'
 "Plugin 'Indent-Guides'
 "Plugin 'SQLComplete.vim'
 "Plugin 'Shougo/neocomplete'
-"Plugin 'Solarized'
 "Plugin 'The-NERD-tree'
 "Plugin 'ZenCoding.vim'
 "Plugin 'ctrlp.vim'
@@ -66,7 +66,7 @@ filetype plugin indent on
 let $GIT_SSL_NO_VERIFY = 'true'
 
 " Set color theme
-"let g:solarized_termcolors=16
+let g:solarized_termcolors=16
 colorscheme solarized
 
 " 문법 강조기능 사용
