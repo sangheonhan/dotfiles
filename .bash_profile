@@ -58,3 +58,5 @@ if [ "$?" -eq "0" ]; then
 	eval `dircolors -b $DIRCOLORS_FILE`
     fi
 fi
+
+export TERM=xterm-256color-italic
