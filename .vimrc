@@ -67,6 +67,7 @@ let $GIT_SSL_NO_VERIFY = 'true'
 
 " Set color theme
 let g:solarized_termcolors=16
+let g:solarized_italic=0
 colorscheme solarized
 
 " 문법 강조기능 사용
