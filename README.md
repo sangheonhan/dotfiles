@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-SangHeon&#39;s dotfiles
+Sangheon's dotfiles
