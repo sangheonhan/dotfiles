@@ -4,7 +4,7 @@ git pull
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
 }
-if [ ! -d ~/.vim/bundle/vundle ]; then
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
