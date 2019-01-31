@@ -45,12 +45,6 @@ if [ -d /usr/local/opt/coreutils/libexec/gnuman ]; then
     MANPATH="$MANPATH:/usr/local/opt/coreutils/libexec/gnuman"
 fi
 
-# Go
-if [ -d $HOME/go ]; then
-    export GOROOT=$HOME/go
-    PATH=${GOROOT}/bin:$PATH
-fi
-
 # Export
 export PATH
 export MANPATH
