@@ -91,9 +91,13 @@ if has("gui_running")
     endif
 endif
 
-" 마우스
+" 마우스 & 윈도우 gvim 메뉴 깨짐 방지
 if has('win32')
     set mouse=n
+    if has('gui')
+        source $VIMRUNTIME/delmenu.vim
+        source $VIMRUNTIME/menu.vim
+    endif
 endif
 
 " Map
