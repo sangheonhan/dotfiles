@@ -83,11 +83,11 @@ endif
 if has("gui_running")
     set visualbell  " 비주얼벨 기능 사용
     if has("gui_macvim")
-        set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h18
+        set guifont=DejaVuSansMonoPowerline:h14
     elseif has("gui_win32")
-        set guifont=Bitstream_Vera_Sans_Mono_for_Po:h12:cHANGEUL
+        set guifont=DejaVu_Sans_Mono_for_Powerline:h12
     else
-        set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12
+        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
     endif
 endif
 
