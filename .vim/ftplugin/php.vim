@@ -27,3 +27,6 @@ augroup phpSyntaxOverride
     autocmd!
     autocmd FileType php call PhpSyntaxOverride()
 augroup END
+
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+let g:php_cs_fixer_rules = "@PSR2,binary_operator_spaces,cast_spaces,declare_equal_normalize,concat_space,space_after_semicolon"

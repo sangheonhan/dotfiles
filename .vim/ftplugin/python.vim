@@ -11,3 +11,5 @@ setlocal foldmethod=marker
 setlocal tags=tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 
 map <Leader>r :!python %:p<CR>
+
+autocmd BufWritePre *.py execute ':Black'

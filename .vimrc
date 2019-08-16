@@ -22,6 +22,8 @@ Plugin 'ctrlp.vim'
 Plugin 'neocomplcache'
 Plugin 'powerline/powerline'
 Plugin 'taglist.vim'
+Plugin 'psf/black'
+Plugin 'stephpy/vim-php-cs-fixer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
