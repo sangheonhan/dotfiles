@@ -28,6 +28,9 @@ alias ipconfig="/sbin/ifconfig -a | perl -nle 'chomp(\$1), print \$1 if /(\d+\.\
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
+# Check public IP
+alias publicip="wget -q -O - checkip.dyndns.org \ | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+
 # Use vim instead of vi
 alias vi=vim
 
