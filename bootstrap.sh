@@ -26,3 +26,7 @@ vim +PluginClean! +qall
 
 # Reload tmux configration
 tmux source-file ~/.tmux.conf
+
+# Install Fuzzy Finder
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
