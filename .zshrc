@@ -100,3 +100,5 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.aliases
 source ~/.extra
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
