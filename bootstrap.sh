@@ -29,7 +29,7 @@ tmux source-file ~/.tmux.conf
 
 # Install zsh & Oh My Zsh
 if [ ! -d ~/.oh-my-zsh ]; then
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 fi
 
 # Install Fuzzy Finder
@@ -38,3 +38,4 @@ if [ ! -d ~/.fzf ]; then
 	~/.fzf/install --all
 fi
 
+rsync -av .zshrc ~
