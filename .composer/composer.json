@@ -12,8 +12,8 @@
         "friendsofphp/php-cs-fixer": "@stable",
         "phpmd/phpmd": "@stable",
         "phploc/phploc": "@stable",
-        "gonzaloserrano/pman-php-manual": "dev-master",
-        "hirak/prestissimo": "@stable"
+        "hirak/prestissimo": "@stable",
+        "sangheonhan/pman-php-manual": "@stable"
     },
     "scripts": {
         "post-update-cmd": [
