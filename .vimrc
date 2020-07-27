@@ -20,10 +20,11 @@ Plugin 'Syntastic'
 Plugin 'The-NERD-tree'
 Plugin 'ctrlp.vim'
 Plugin 'neocomplcache'
-Plugin 'powerline/powerline'
-Plugin 'taglist.vim'
 Plugin 'psf/black'
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'taglist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,11 +107,10 @@ endif
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>t :TlistToggle<CR>
 
-" Powerline
-set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2    " Always display the statusline in all windows
-set showtabline=2   " Always display the tabline, even if there is only one tab
-set noshowmode      " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Ctrl-P
 let g:ctrlp_map='<c-p>'
