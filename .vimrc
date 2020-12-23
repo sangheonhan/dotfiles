@@ -52,7 +52,7 @@ set cindent                     " C 언어 자동 들여쓰기
 set encoding=utf-8              " 에디터 인코딩을 UTF-8로 설정
 set fileencodings=utf-8,euc-kr  " 파일인코딩을 UTF-8로 설정
 set foldmethod=marker           " 폴딩 방식
-set ignorecase                  " 찾기에서 대/소문자를 구별하지 않음
+set smartcase                   " 소문자 단어의 경우는 찾기에서 대/소문자를 구별하지 않음
 set incsearch                   " 점진적으로 찾기
 set nocompatible                " Vim 디폴트 기능들을 사용함
 set nojoinspaces                " J 명령어로 줄을 붙일 때 마침표 뒤에 한칸만 띔
@@ -67,6 +67,7 @@ set title                       " 타이틀바에 현재 편집중인 파일을 
 set number                      " 행 번호를 표시
 set hlsearch                    " 찾는 단어를 하이라이팅
 set langmenu=none               " 영문 메뉴
+set noswapfile                  " 스왑파일 사용 안 함
 language messages ko_KR.utf-8   " 한국어 vim 메시지
 
 " Fix 'SSL certificate problem'
