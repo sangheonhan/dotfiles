@@ -14,9 +14,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/neocomplete.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
-Plug 'psf/black'
+Plug 'psf/black', { 'for': 'python' }
 Plug 'scrooloose/nerdtree'
-Plug 'stephpy/vim-php-cs-fixer'
+Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
