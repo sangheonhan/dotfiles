@@ -207,9 +207,7 @@ alias vi=vim
 # Vim viewer
 alias v=view
 
-
 # READ EXTRA CONFUGRATION
-
-
 [ -f ~/.extra ] && source ~/.extra
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

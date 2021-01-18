@@ -8,12 +8,6 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
 }
 
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-else
-    (cd ~/.vim/bundle/Vundle.vim && git pull)
-fi
-
 if [ ! -d ~/.dircolors-solarized/ ]; then
 	git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors-solarized
 else
@@ -31,12 +25,11 @@ else
 fi
 unset doIt
 
-# Install Vundle
-vim +PluginInstall +qall
-vim +PluginClean! +qall
-
 # Reload tmux configration
 tmux source-file ~/.tmux.conf
+
+# Install vim-plug & plugins
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 
 # Install zsh & Oh My Zsh
 if [ ! -d ~/.oh-my-zsh ]; then
@@ -47,6 +40,11 @@ fi
 if [ ! -d ~/.fzf ]; then
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 	~/.fzf/install --all
+fi
+
+# Install Zsh syntax highlighting
+if [ ! -d ~/.zsh/zsh-syntax-highlighting ]; then
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"
 fi
 
 rsync -av .zshrc ~
