@@ -118,6 +118,16 @@ if [ -d $HOME/.composer/vendor/bin ]; then
     export PATH
 fi
 
+# Go
+if [ -d /usr/local/go/bin ]; then
+    PATH=$PATH:/usr/local/go/bin
+    export PATH
+fi
+if [ -d $HOME/go/bin ]; then
+    PATH=$PATH:$HOME/go/bin
+    export PATH
+fi
+
 # Make vim the default editor
 export EDITOR="vim"
 
@@ -211,3 +221,4 @@ alias v=view
 [ -f ~/.extra ] && source ~/.extra
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -d $HOME/.cargo/env ] && source $HOME/.cargo/env
