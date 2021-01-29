@@ -6,13 +6,12 @@
         }
     ],
     "require": {
-        "phpunit/phpunit": "@stable",
-        "phpdocumentor/phpdocumentor": "@stable",
-        "squizlabs/php_codesniffer": "@stable",
-        "friendsofphp/php-cs-fixer": "@stable",
-        "phpmd/phpmd": "@stable",
-        "phploc/phploc": "@stable",
-        "sangheonhan/pman-php-manual": "@stable"
+        "phpunit/phpunit": "~9",
+        "squizlabs/php_codesniffer": "~3",
+        "friendsofphp/php-cs-fixer": "~2",
+        "phpmd/phpmd": "~2",
+        "phploc/phploc": "~7",
+        "sangheonhan/pman-php-manual": "~1"
     },
     "scripts": {
         "post-update-cmd": [
