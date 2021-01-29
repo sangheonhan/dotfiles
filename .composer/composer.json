@@ -12,7 +12,6 @@
         "friendsofphp/php-cs-fixer": "@stable",
         "phpmd/phpmd": "@stable",
         "phploc/phploc": "@stable",
-        "hirak/prestissimo": "@stable",
         "sangheonhan/pman-php-manual": "@stable"
     },
     "scripts": {
