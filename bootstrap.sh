@@ -8,6 +8,10 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "sync.sh" -av . ~
 }
 
+if [ ! -f ~~/.vim/autoload/plug.vim ]; then
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
 if [ ! -d ~/.dircolors-solarized/ ]; then
 	git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors-solarized
 else
