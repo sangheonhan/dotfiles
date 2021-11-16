@@ -10,3 +10,4 @@ rsync -avzhe ssh --delete ~/.zsh/ $1:~/.zsh
 rsync -avzhe ssh --delete ~/.fzf/ $1:~/.fzf
 rsync -avzhe ssh --delete ~/.oh-my-zsh/ $1:~/.oh-my-zsh
 rsync -avzhe ssh --delete ~/.composer/ $1:~/.composer
+rsync -avzhe ssh --delete ~/.dircolors-solarized/  $1:~/.dircolors-solarized
