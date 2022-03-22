@@ -33,7 +33,7 @@ unset doIt
 tmux source-file ~/.tmux.conf
 
 # Install vim-plug & plugins
-vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+vim -es -u ~/.vimrc -i NONE -c "PlugInstall" -c "qa"
 
 # Install zsh & Oh My Zsh
 if [ ! -d ~/.oh-my-zsh ]; then
