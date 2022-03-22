@@ -15,7 +15,7 @@ fi
 if [ ! -d ~/.dircolors-solarized/ ]; then
 	git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors-solarized
 else
-    (cd ~/.dircolors-solarized/ && git pull)
+	(cd ~/.dircolors-solarized/ && git pull)
 fi
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -41,7 +41,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
 fi
 
 if [ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
 
 # Install Fuzzy Finder
