@@ -136,7 +136,7 @@ if [ -d $HOME/go/bin ]; then
 fi
 
 # Make vim the default editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
@@ -219,7 +219,7 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 alias publicip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
 # Use Vim instead of vi
-alias vi=vim
+alias vi=nvim
 
 # Vim viewer
 alias v=view
