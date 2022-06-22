@@ -55,4 +55,4 @@ if [ ! -d ~/.zsh/zsh-syntax-highlighting ]; then
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"
 fi
 
-rsync -av .zshrc .config/nvim/ ~
+rsync -av .zshrc ~
