@@ -20,7 +20,7 @@ Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
-Plug 'yegappan/taglist'
+Plug 'preservim/tagbar'
 call plug#end()
 
 """ ========================================================
@@ -89,7 +89,7 @@ endif
 
 " Map
 map <Leader>n :NERDTreeToggle<CR>
-map <Leader>t :TlistToggle<CR>
+map <Leader>t :TagbarToggle<CR>
 
 " Airline
 let g:airline_powerline_fonts = 1
