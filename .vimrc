@@ -12,7 +12,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 " Vim Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/neocomplete.vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'kien/ctrlp.vim'
 Plug 'psf/black', { 'for': 'python' }
 Plug 'scrooloose/nerdtree'
@@ -56,9 +56,8 @@ language messages ko_KR.utf-8   " 한국어 vim 메시지
 let $GIT_SSL_NO_VERIFY='true'
 
 " Set color theme
-let g:solarized_termcolors=16
-let g:solarized_italic=0
-colorscheme solarized
+let g:solarized_use16=1
+colorscheme solarized8
 
 " 문법 강조기능 사용
 if has("syntax")
