@@ -219,7 +219,7 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 alias publicip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
 # Use Vim instead of vi
-alias vi=nvim
+alias vi=vim
 
 # Vim viewer
 alias v=view
