@@ -136,7 +136,7 @@ if [ -d $HOME/go/bin ]; then
 fi
 
 # Make vim the default editor
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
