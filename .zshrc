@@ -108,6 +108,11 @@ source $ZSH/oh-my-zsh.sh
 
 # EXPORT ENVIRONMENT VARIABLES
  
+# Homebrew
+if [ -d /opt/homebrew/bin/ ]; then
+    PATH=$PATH:/opt/homebrew/bin/
+    export PATH
+fi
 
 # Homebrew Coreutils
 if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
