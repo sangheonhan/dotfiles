@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 git pull
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "sync.sh" -av . ~
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "sync.sh" --exclude ".gitconfig" -av . ~
 }
 
 if [ ! -f ~~/.vim/autoload/plug.vim ]; then

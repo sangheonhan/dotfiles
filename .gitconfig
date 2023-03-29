@@ -1,0 +1,27 @@
+[user]
+	name = Sangheon Han
+	email = han@sangheon.com
+
+[core]
+	quotepath = off
+	editor = vim
+	precomposeunicode = true
+	excludesfile = ~/.gitignore
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[color]
+	ui = true
+
+[pull]
+	rebase = false
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = simple
