@@ -114,6 +114,10 @@ if [ -d /opt/homebrew/bin/ ]; then
     export PATH
 fi
 
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # Homebrew Coreutils
 if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
     PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
