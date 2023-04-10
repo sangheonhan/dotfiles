@@ -110,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
  
 # Homebrew
 if [ -d /opt/homebrew/bin/ ]; then
-    PATH=$PATH:/opt/homebrew/bin/
+    PATH=$PATH:/opt/homebrew/bin
     export PATH
 fi
 
