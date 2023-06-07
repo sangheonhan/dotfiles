@@ -57,8 +57,9 @@ language messages ko_KR.utf-8   " 한국어 vim 메시지
 let $GIT_SSL_NO_VERIFY='true'
 
 " Set color theme
-let g:solarized_use16=1
-colorscheme solarized8
+set termguicolors
+set background=dark
+autocmd vimenter * ++nested colorscheme solarized8
 
 " 문법 강조기능 사용
 if has("syntax")
