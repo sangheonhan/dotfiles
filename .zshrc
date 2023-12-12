@@ -237,7 +237,8 @@ alias v=view
 [ -f ~/.extra ] && source ~/.extra
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -d $HOME/.cargo/env ] && source $HOME/.cargo/env
+[ -f $HOME/.zshenv ] && source $HOME/.zshenv 
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
