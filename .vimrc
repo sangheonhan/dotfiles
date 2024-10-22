@@ -19,7 +19,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'preservim/tagbar'
 Plug 'github/copilot.vim'
 call plug#end()
@@ -101,26 +101,6 @@ let g:airline_solarized_bg='dark'
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
-
-" TagList
-let Tlist_Use_Right_Window=1
-
-" netcomplecache
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_smart_case=1
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_python_python_exec = 'python3'
-let g:syntastic_python_checkers = ['python']
-
-" Markdown
-au BufRead,BufNewFile *.md set filetype=markdown
 
 " Search in all subdirectories.
 set path+=**
